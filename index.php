@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="media/favicon.png" type="image/x-icon">
     <title>Tortas el rinconcito</title>
 </head>
 <body>
@@ -53,6 +54,14 @@
             </nav>
         </div>
     </header>
+
+    <section class="banner">
+        <div class="content-banner">
+            <p>Las mejores tortas de Texcoco</p>
+            <h2>Priorizamos el sabor <br>Con los mejores ingredientes</h2>
+        </div>
+    </section>
+
 
     <script src="https://kit.fontawesome.com/81581fb069.js"
     crossorigin="anonymous"></script>
