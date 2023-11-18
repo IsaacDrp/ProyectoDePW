@@ -65,25 +65,32 @@
 
     <main class="main-content">
         <section class="containter container-features">
-            <div class="money-feature">
+            <div class="card-feature money-feature">
                 <i class="fa-solid fa-coins"></i>
                 <div class="feature-content">
                     <span>Aceptamos efectivo</span>
                     <p>Denominaciones menores a $500</p>
                 </div>
             </div>
-            <div class="transfer-feature">
+            <div class="card-feature transfer-feature">
                 <i class="fa-solid fa-money-bill-transfer"></i>
                 <div class="feature-content">
                     <span>Aceptamos transferencia</span>
                     <p>Durante segundo horario</p>
                 </div>
             </div>
-            <div class="opening-hours">
+            <div class="card-feature opening-hours">
                 <i class="fa-solid fa-clock"></i>
                 <div class="feature-content">
                     <span>Horarios de apertura</span>
                     <p>De lunes a sábado <br>De 10:00Am a 3:00Pm <br>Y de 6:00Pm a 9:00Pm</p>
+                </div>
+            </div>
+            <div class="card-feature opening-hours">
+                <i class="fa-solid fa-plug"></i>
+                <div class="feature-content">
+                    <span>Carga de celular</span>
+                    <p>Contamos con contactos eléctricos<br>para que cargues tu celular</p>
                 </div>
             </div>
         </section>
@@ -122,12 +129,52 @@
 
                 <div class="card-product">
                     <div class="container-img">
-                        <img src="media/Products/TortaMilanesa.jpg" alt="Torta de milanesa" width=250>
+                        <img src="media/Products/TortaMilanesa.jpg" alt="Torta de milanesa">
                         <span>precio</span>
                         <div class="button-group">
                             <span><i class="fa-regular fa-eye"></i></span>
                             <span><i class="fa-regular fa-heart"></i></span>
-                            <span><i class="fa-regular fa-code-compare"></i></span>
+                            <span><i class="fa-solid fa-code-compare"></i></span>
+                        </div>
+                    </div>
+                    <div class="content-card-product">
+                        <div class="stars">
+                        <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                        <i class="fa-regular fa-star"></i>
+                        </div>
+                        <h3>Torta de milanesa</h3>
+                        <p class="price">$58.00</p>
+                    </div>
+                </div>
+
+                <div class="card-product">
+                    <div class="container-img">
+                        <img src="media/Products/TortaMilanesa.jpg" alt="Torta de milanesa">
+                        <span>precio</span>
+                        <div class="button-group">
+                            <span><i class="fa-regular fa-eye"></i></span>
+                            <span><i class="fa-regular fa-heart"></i></span>
+                            <span><i class="fa-solid fa-code-compare"></i></span>
+                        </div>
+                    </div>
+                    <div class="content-card-product">
+                        <div class="stars">
+                        <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                        <i class="fa-regular fa-star"></i>
+                        </div>
+                        <h3>Torta de milanesa</h3>
+                        <p class="price">$58.00</p>
+                    </div>
+                </div>
+
+                <div class="card-product">
+                    <div class="container-img">
+                        <img src="media/Products/TortaMilanesa.jpg" alt="Torta de milanesa">
+                        <span>precio</span>
+                        <div class="button-group">
+                            <span><i class="fa-regular fa-eye"></i></span>
+                            <span><i class="fa-regular fa-heart"></i></span>
+                            <span><i class="fa-solid fa-code-compare"></i></span>
                         </div>
                     </div>
                     <div class="content-card-product">
