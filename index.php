@@ -86,28 +86,60 @@
                     <p>De lunes a sábado <br>De 10:00Am a 3:00Pm <br>Y de 6:00Pm a 9:00Pm</p>
                 </div>
             </div>
+        </section>
+        <section class="container top-categories">
+            <h1 class="heading-1">Categorías</h1>
+            <div class="container-categories">
 
-            <section class="container top-categories">
-                <h1 class="heading-1">Categorías</h1>
-                <div class="container-categories">
-
-                    <div class="card-category category-tortas">
-                        <p>Tortas</p>
-                        <span>Ver más</span>
-                    </div>
-
-                    <div class="card-category category-desayunos">
-                        <p>Desayunos</p>
-                        <span>Ver más</span>
-                    </div>
-
-                    <div class="card-category category-bebidas">
-                        <p>Bebidas</p>
-                        <span>Ver más</span>
-                    </div>
-
+                <div class="card-category category-tortas">
+                    <p>Tortas</p>
+                    <span>Ver más</span>
                 </div>
-            </section>
+
+                <div class="card-category category-desayunos">
+                    <p>Desayunos</p>
+                    <span>Ver más</span>
+                </div>
+
+                <div class="card-category category-bebidas">
+                    <p>Bebidas</p>
+                    <span>Ver más</span>
+                </div>
+
+            </div>
+        </section>
+        
+        <section class="container top-products">
+            <h1 class="heading-1">Productos</h1>
+
+            <div class="container-options">
+                <span class="active">Destacados</span>
+                <span>Más recientes</span>
+                <span>Mejor valorados</span>
+            </div>
+
+            <div class="container-products">
+
+                <div class="card-product">
+                    <div class="container-img">
+                        <img src="media/Products/TortaMilanesa.jpg" alt="Torta de milanesa" width=250>
+                        <span>precio</span>
+                        <div class="button-group">
+                            <span><i class="fa-regular fa-eye"></i></span>
+                            <span><i class="fa-regular fa-heart"></i></span>
+                            <span><i class="fa-regular fa-code-compare"></i></span>
+                        </div>
+                    </div>
+                    <div class="content-card-product">
+                        <div class="stars">
+                        <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                        <i class="fa-regular fa-star"></i>
+                        </div>
+                        <h3>Torta de milanesa</h3>
+                        <p class="price">$58.00</p>
+                    </div>
+                </div>
+            </div>
         </section>
     </main>
 
