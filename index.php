@@ -63,6 +63,54 @@
     </section>
 
 
+    <main class="main-content">
+        <section class="containter container-features">
+            <div class="money-feature">
+                <i class="fa-solid fa-coins"></i>
+                <div class="feature-content">
+                    <span>Aceptamos efectivo</span>
+                    <p>Denominaciones menores a $500</p>
+                </div>
+            </div>
+            <div class="transfer-feature">
+                <i class="fa-solid fa-money-bill-transfer"></i>
+                <div class="feature-content">
+                    <span>Aceptamos transferencia</span>
+                    <p>Durante segundo horario</p>
+                </div>
+            </div>
+            <div class="opening-hours">
+                <i class="fa-solid fa-clock"></i>
+                <div class="feature-content">
+                    <span>Horarios de apertura</span>
+                    <p>De lunes a sábado <br>De 10:00Am a 3:00Pm <br>Y de 6:00Pm a 9:00Pm</p>
+                </div>
+            </div>
+
+            <section class="container top-categories">
+                <h1 class="heading-1">Categorías</h1>
+                <div class="container-categories">
+
+                    <div class="card-category category-tortas">
+                        <p>Tortas</p>
+                        <span>Ver más</span>
+                    </div>
+
+                    <div class="card-category category-desayunos">
+                        <p>Desayunos</p>
+                        <span>Ver más</span>
+                    </div>
+
+                    <div class="card-category category-bebidas">
+                        <p>Bebidas</p>
+                        <span>Ver más</span>
+                    </div>
+
+                </div>
+            </section>
+        </section>
+    </main>
+
     <script src="https://kit.fontawesome.com/81581fb069.js"
     crossorigin="anonymous"></script>
 </body>
