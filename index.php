@@ -47,7 +47,7 @@
                 <div class="container-logo">
                     <i class="fa-solid fa-burger"></i>
                     <h1 class="logo">
-                        <a href="/">Tortas el Rinconcito</a>
+                        <a href="#">Tortas el Rinconcito</a>
                     </h1>
                 </div>
                 <div class="container-user">
@@ -285,6 +285,32 @@
                 </div>
             </div>
         </section>
+        
+        <section class="bannerUs">
+        <div class="content-banner1">
+            <h1>Nosotros</h1>
+            <h2>Historia</h2>
+            <p>Este negocio surge a raíz de la frustración de la Sra. Lupe, quien durante años buscó sin éxito un lugar que ofreciera tortas no solo para saciar el hambre momentánea, sino también para brindar una experiencia de sabor excepcional y un ambiente agradable para disfrutarlas. Con el apoyo de sus hijos y esposo, decide construir su propio local, dando vida a "Tortas El Rinconcito", un espacio donde puede ofrecer lo que nunca encontró en los demás negocios de tortas.</p>
+            <h2>Misión</h2>
+            <p>
+                Nuestra misión consiste en proporcionar un servicio y alimentos de alta calidad para garantizar a nuestros clientes una experiencia excepcional al disfrutar de nuestras tortas y desayunos. Además, nos comprometemos a mantener estándares rigurosos de higiene para asegurar un entorno saludable y seguro.
+            </p>
+            <h2>Visión</h2>
+            <p>
+                Nuestra visión es convertirnos en la franquicia líder de fuentes de sodas y venta de tortas a nivel regional, manteniendo el compromiso con nuestra misión y valores fundamentales.
+            </p>
+            <h2>Valores</h2>
+            <ul>
+            <li><p>Calidad: Comprometidos con ofrecer alimentos de alta calidad y servicios excepcionales.</p></li>
+            <li><p>Experiencia: Buscamos proporcionar a nuestros clientes una experiencia culinaria única y satisfactoria.</p></li>
+            <li><p>Compromiso Familiar: Valoramos el esfuerzo conjunto de la familia en la construcción y operación del negocio.</p></li>
+            <li><p>Higiene y Seguridad: Mantenemos estándares rigurosos de higiene para asegurar un ambiente saludable y seguro.</p></li>
+            <li><p>Satisfacción del Cliente: Nos esforzamos por superar las expectativas del cliente y garantizar su plena satisfacción.</p></li>
+            <li><p>Liderazgo Regional: Aspiramos a ser la principal franquicia de fuentes de sodas y venta de tortas </p></li>
+            </ul>
+            <p></p>
+        </div>
+    </section>
 
         <section class="container blogs">
             <h1 class="heading-1">Ligas de interés</h1>
