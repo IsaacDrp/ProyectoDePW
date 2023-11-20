@@ -51,7 +51,7 @@
                     </h1>
                 </div>
                 <div class="container-user">
-                    <i class="fa-solid fa-user"></i>
+                    <a href="registro.php"><i class="fa-solid fa-user"></i></a>
                     <i class="fa-solid fa-money-bill"></i>
                     <div class="content-ticket">
                         <span class="text">Cupones</span>

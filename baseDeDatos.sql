@@ -6,9 +6,9 @@ CREATE TABLE CLIENTE(
     nombre_cliente VARCHAR(20),
     primer_apellido VARCHAR(10),
     segundo_apellido VARCHAR(10),
-    contrasena VARCHAR(12),
     direccion VARCHAR(30),
     email VARCHAR(25),
+    contrasena VARCHAR(12),
 	edad INT NOT NULL,
     PRIMARY KEY (id_cliente)
 	);
