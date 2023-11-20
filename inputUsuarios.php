@@ -14,8 +14,7 @@
     $query = "INSERT INTO CLIENTE (nombre_cliente, primer_apellido, segundo_apellido, direccion, email, contrasena, edad)
         VALUES ('$nombre_cliente', '$primer_apellido', '$segundo_apellido', '$direccion', '$email', '$contrasena', $edad)";
     
-    echo"<h1>$query</h1>";
-
     mysqli_query($conexion, $query);
     mysqli_close($conexion);
+    header("location: /ProyectoDePW/successful.html");
 ?>
