@@ -33,7 +33,10 @@
         gap: 2rem;
         margin-bottom: 3rem;
         }
+
+
 </style>
+
     <header>
         <div class="container-hero">
             <div class="container hero">
@@ -50,14 +53,65 @@
                         <a href="#">Tortas el Rinconcito</a>
                     </h1>
                 </div>
+                
+
                 <div class="container-user">
-                    <a href="registro.php"><i class="fa-solid fa-user"></i></a>
-                    <i class="fa-solid fa-money-bill"></i>
+                    <a href="#" id="user-icon"><i class="fa-solid fa-user"></i></a>
+                    <!-- Menú desplegable del usuario -->
+                    <div class="user-dropdown" id="user-dropdown">
+                        <!-- Contenido del menú desplegable -->
+                        <ul>
+                        <?php
+                            session_start();
+                            // Verifica si el usuario ha iniciado sesión
+                            if (isset($_SESSION['usuario_autenticado']) && $_SESSION['usuario_autenticado'] === true) {
+                                // Muestra información específica para usuarios autenticados
+                                echo '<h2>Hola, ' . $_SESSION['correo_usuario'] . '!</h2>';
+                                echo '<button onclick="window.location.href=\'logout.php\'">Cerrar sesión</button>';
+                            
+                            } else {
+                                echo"<h1>¿Eres nuevo aquí?</h1>";
+                                echo '<button onclick="window.location.href=\'registro.php\'">¡Regístrate!</button>';
+                                echo '<br><br>';
+                                echo "<h1>Inicia sesión<br></h1>";
+                                echo '<form action="login.php" method="post">';
+                                echo '    <input class="search-form" type="text" name="correo" id="correo" placeholder="correo" required>';
+                                echo '    <label for="contrasena">Contraseña:</label>';
+                                echo '    <input class="search-form" type="password" name="contrasena" id="contrasena" required>';
+                                echo '<br>';
+                                echo '    <button class="login-button" type="submit">Iniciar Sesión</button>';
+                                echo '</form>';
+                            }
+                            ?>
+                        </ul>
+                    </div>
+                    <!-- Fin del menú desplegable -->
+
+                    <a href="#" id="money-bill-icon"><i class="fa-solid fa-money-bill"></i></a>
+                    <!-- Menú desplegable para money-bill -->
+                    <div class="money-bill-dropdown" id="money-bill-dropdown">
+                        <!-- Contenido del menú desplegable -->
+                        <ul>
+                        <?php
+                            // Verifica si el usuario ha iniciado sesión
+                            if (isset($_SESSION['usuario_autenticado']) && $_SESSION['usuario_autenticado'] === true) {
+                                // Muestra información específica para usuarios autenticados
+                                echo '<p>Hola, ' . $_SESSION['correo_usuario'] . '. ¡Has iniciado sesión!</p>';
+                            }
+                            else{
+                                echo"<h2>¡Inicia sesión para ver tus cupones!</h2>";
+                            }
+                        ?>
+                        </ul>
+                    </div>
+
                     <div class="content-ticket">
                         <span class="text">Cupones</span>
                         <span class="number">(0)</span>
                     </div>
                 </div>
+
+
             </div>
         </div>
         <div class="container-navbar">
@@ -463,5 +517,47 @@
 
     <script src="https://kit.fontawesome.com/81581fb069.js"
     crossorigin="anonymous"></script>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const userIcon = document.getElementById("user-icon");
+            const userDropdown = document.getElementById("user-dropdown");
+            const moneyBillIcon = document.getElementById("money-bill-icon");
+            const moneyBillDropdown = document.getElementById("money-bill-dropdown");
+
+            // Función para cerrar todos los menús desplegables
+            function closeAllDropdowns() {
+                userDropdown.style.display = "none";
+                moneyBillDropdown.style.display = "none";
+            }
+
+            userIcon.addEventListener("click", function (event) {
+                event.stopPropagation();
+                moneyBillDropdown.style.display = "none"; // Cerrar el menú del billete al hacer clic en el usuario
+                userDropdown.style.display = (userDropdown.style.display === "block") ? "none" : "block";
+            });
+
+            moneyBillIcon.addEventListener("click", function (event) {
+                event.stopPropagation();
+                userDropdown.style.display = "none"; // Cerrar el menú del usuario al hacer clic en el billete
+                moneyBillDropdown.style.display = (moneyBillDropdown.style.display === "block") ? "none" : "block";
+            });
+
+            document.addEventListener("click", function () {
+                closeAllDropdowns();
+            });
+
+            // Evitar que hacer clic dentro de los menús desplegables los cierre
+            userDropdown.addEventListener("click", function (event) {
+                event.stopPropagation();
+            });
+
+            moneyBillDropdown.addEventListener("click", function (event) {
+                event.stopPropagation();
+            });
+        });
+    </script>
+
+    
 </body>
 </html>

@@ -79,27 +79,95 @@ html {
 }
 
 .container-user {
-	display: flex;
-	gap: 1rem;
-	cursor: pointer;
+    display: flex;
+    gap: 1rem;
+    position: relative; /* Añadido para posicionar el menú desplegable correctamente */
 }
 
 .container-user .fa-user {
-	font-size: 3rem;
-	color: var(--primary-color);
-	padding-right: 2.5rem;
-	border-right: 1px solid #e2e2e2;
+    font-size: 3rem;
+    color: var(--primary-color);
+    padding-right: 2.5rem;
+    border-right: 1px solid #e2e2e2;
+    cursor: pointer; /* Añadido para indicar que es interactivo */
+}
+
+.user-dropdown {
+    display: none;
+    position: absolute;
+    top: 100%;
+    right: 0;
+    background-color: var(--primary-color);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.455);
+    z-index: 1;
+	border-radius: 30px;
+}
+
+.user-dropdown ul {
+    list-style: none;
+    padding: 10px;
+    margin: 0;
+}
+
+.user-dropdown li {
+    margin-bottom: 8px;
 }
 
 .container-user .fa-money-bill {
-	font-size: 3rem;
+    font-size: 3rem;
+    color: var(--primary-color);
+    padding-left: 1rem;
+    cursor: pointer; /* Añadido para indicar que es interactivo */
+}
+
+.money-bill-dropdown {
+    display: none;
+    position: absolute;
+    top: 100%;
+    right: 0;
+    background-color: var(--primary-color);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.378);
+    z-index: 1;
+	border-radius: 30px;
+}
+
+.money-bill-dropdown ul {
+    list-style: none;
+    padding: 10px;
+    margin: 0;
+}
+
+.money-bill-dropdown li {
+    margin-bottom: 8px;
+}
+
+.container-user button {
+	border: none;
+	background-color: #000;
+	color: #fff;
+	text-transform: uppercase;
+	padding: 1rem 3rem;
+	border-radius: 2rem;
+	font-size: 1.4rem;
+	font-family: inherit;
+	cursor: pointer;
+	font-weight: 600;
+}
+
+.container-user button:hover {
+	background-color: var(--background-color);
 	color: var(--primary-color);
-	padding-left: 1rem;
+}
+
+.container-user .fa-money-bill {
+    font-size: 3rem;
+    color: var(--primary-color);
+    padding-left: 1rem;
 }
 
 .content-ticket {
-	display: flex;
-	flex-direction: column;
+    display: flex;
+    flex-direction: column;
 }
 
 /* ************* NAVBAR ************* */

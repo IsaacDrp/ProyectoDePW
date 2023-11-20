@@ -6,5 +6,5 @@
     mysqli_query($conexion, $query);
     mysqli_close($conexion);
     echo"<h1>CORREO INGRESADO CON EXITO</h1>";
-    header("location: /ProyectoDePW");
+    header("location: /ProyectoDePW/successful.html");
 ?>
