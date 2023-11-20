@@ -6,11 +6,18 @@ CREATE TABLE CLIENTE(
     nombre_cliente VARCHAR(20),
     primer_apellido VARCHAR(10),
     segundo_apellido VARCHAR(10),
+    contrasena VARCHAR(12),
     direccion VARCHAR(30),
     email VARCHAR(25),
 	edad INT NOT NULL,
     PRIMARY KEY (id_cliente)
 	);
+
+CREATE TABLE EMAIL(
+    idEmail INT NOT NULL AUTO_INCREMENT,
+    email VARCHAR(25),
+    PRIMARY KEY (idEmail)
+);
     
 CREATE TABLE CUPON (
     id_cupon INT NOT NULL AUTO_INCREMENT,

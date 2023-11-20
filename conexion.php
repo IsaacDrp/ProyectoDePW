@@ -8,8 +8,5 @@
 
     if($conexion->connect_error){
         echo"<h1>MySQL no te está dando permisos para ejecutar las consultas</h1>";
-    } else {
-        echo"<h2 style='color: greenyellow; text-align: center;'>Hola, tu conexión está funcionando.</h2>";
     }
-
 ?>

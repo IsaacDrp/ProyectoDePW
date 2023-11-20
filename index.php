@@ -443,7 +443,11 @@
 								Suscríbete a nuestros boletines ahora y mantente al
 								día con nuevas colecciones y ofertas exclusivas.
 							</p>
-							<input type="email" placeholder="Ingresa el correo aquí...">
+
+                            <form method="POST" autocomplete="off" action="inputCorreo.php">
+                                <input type="email"name="email" placeholder="Ingresa el correo aquí...">
+                            </form>
+
 							<button>Suscríbete</button>
 						</div>
 					</div>
