@@ -228,26 +228,56 @@
             </div>
 
             <div class="container-products">
+                <?php
+                    require "conexion.php";
+                    mysqli_set_charset($conexion,'utf8');
 
-                <div class="card-product">
-                    <div class="container-img">
-                        <img src="media/Products/TortaMilanesa.jpg" alt="Torta de milanesa">
-                        <span></span>
-                        <div class="button-group">
-                            <span><i class="fa-regular fa-eye"></i></span>
-                            <span><i class="fa-regular fa-heart"></i></span>
-                            <span><i class="fa-solid fa-code-compare"></i></span>
-                        </div>
-                    </div>
-                    <div class="content-card-product">
-                        <div class="stars">
-                        <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
-                        <i class="fa-regular fa-star"></i>
-                        </div>
-                        <h3>Torta de milanesa</h3>
-                        <p class="price">$58.00</p>
-                    </div>
-                </div>
+                    //$query = "SELECT nombre_platillo, precio, descripcion, linkImagen FROM MENU WHERE tipo_patillo=1;";
+                    $query = "SELECT nombre_platillo, precio, descripcion, linkImagen FROM MENU;";
+                    $resultado = $conexion->query($query);
+                    $count = mysqli_num_rows($resultado);
+
+                    if($count > 0){
+                        while( $row = mysqli_fetch_assoc($resultado)){
+                            $platillo = $row['nombre_platillo'];
+                            $precio = $row['precio'];
+                            $descripcion = $row['descripcion'];
+                            $linkImagen = $row['linkImagen'];
+
+                            while ($row = mysqli_fetch_assoc($resultado)) {
+                                $platillo = $row['nombre_platillo'];
+                                $precio = $row['precio'];
+                                $descripcion = $row['descripcion'];
+                                $linkImagen = $row['linkImagen'];
+                            
+                                echo '
+                                <div class="card-product">
+                                    <div class="container-img">
+                                        <img src="media/Products/' . $linkImagen . '" alt="' . $platillo . '">
+                                        <span></span>
+                                        <div class="button-group">
+                                            <span><i class="fa-regular fa-eye"></i></span>
+                                            <span><i class="fa-regular fa-heart"></i></span>
+                                            <span><i class="fa-solid fa-code-compare"></i></span>
+                                        </div>
+                                    </div>
+                                    <div class="content-card-product">
+                                        <div class="stars">
+                                            <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                                            <i class="fa-regular fa-star"></i>
+                                        </div>
+                                        <h3>' . $platillo . '</h3>
+                                        <p class="price">$' . $precio . '</p>
+                                    </div>
+                                </div>';
+                            }
+                        }
+                    }else{
+                        echo"<h3>Aún no tienes cupones</h3><br><br>";
+                    }
+
+                    mysqli_close($conexion);
+                ?>
 
         </section>
 
