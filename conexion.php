@@ -1,8 +1,8 @@
 <?php
-    $host_db="localhost:3306";
-    $user_db="root";
-    $pass_db="root";
-    $db_name="TORTERIA";
+    $host_db="sql313.infinityfree.com:3306";
+    $user_db="if0_35412460";
+    $pass_db="X7cP5aPVPYAqn";
+    $db_name="if0_35412460_torteria ";
 
     $conexion = new mysqli($host_db,$user_db,$pass_db,$db_name);
 
