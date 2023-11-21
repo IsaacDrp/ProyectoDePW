@@ -131,14 +131,25 @@ html {
 	border-radius: 30px;
 }
 
-.money-bill-dropdown ul {
-    list-style: none;
-    padding: 10px;
-    margin: 0;
+money-bill-dropdown table {
+	border-collapse: collapse;
+	width: 100%;
+	border: none;
 }
 
-.money-bill-dropdown li {
-    margin-bottom: 8px;
+.money-bill-dropdown th, .money-bill-dropdown td {
+	border: none;
+	padding: 12px;
+	text-align: left;
+}
+
+.money-bill-dropdown th {
+	background-color: var(--primary-color);
+	color: white;
+}
+
+.money-bill-dropdown tr:hover {
+	background-color: #f5f5f5;
 }
 
 .container-user button {

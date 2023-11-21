@@ -60,3 +60,39 @@ CREATE TABLE ORDEN (
     FOREIGN KEY (idCompra) REFERENCES COMPRA(id_compra),
     FOREIGN KEY (idPlatillo) REFERENCES MENU(id_platillo),
     FOREIGN KEY (idIngrediente) REFERENCES INGREDIENTE_EXTRA(id_ingrediente));
+
+
+
+
+-- Insertar 5 cupones para el cliente con ID 7
+INSERT INTO CUPON (codigo_cupon, fecha_creacion, fecha_vencimiento, idCliente, idCompra)
+VALUES ('CUPON1', '2023-01-01', '2023-02-01', 7, NULL);
+
+INSERT INTO CUPON (codigo_cupon, fecha_creacion, fecha_vencimiento, idCliente, idCompra)
+VALUES ('CUPON2', '2023-03-01', '2023-04-01', 7, NULL);
+
+INSERT INTO CUPON (codigo_cupon, fecha_creacion, fecha_vencimiento, idCliente, idCompra)
+VALUES ('CUPON3', '2023-05-01', '2023-06-01', 7, NULL);
+
+INSERT INTO CUPON (codigo_cupon, fecha_creacion, fecha_vencimiento, idCliente, idCompra)
+VALUES ('CUPON4', '2023-07-01', '2023-08-01', 7, NULL);
+
+INSERT INTO CUPON (codigo_cupon, fecha_creacion, fecha_vencimiento, idCliente, idCompra)
+VALUES ('CUPON5', '2023-09-01', '2023-10-01', 7, NULL);
+
+-- Inserts para el cliente con ID 9
+INSERT INTO CUPON (codigo_cupon, fecha_creacion, fecha_vencimiento, idCliente, idCompra)
+VALUES ('CUPON6', '2023-01-01', '2023-02-01', 9, NULL);
+
+INSERT INTO CUPON (codigo_cupon, fecha_creacion, fecha_vencimiento, idCliente, idCompra)
+VALUES ('CUPON7', '2023-03-01', '2023-04-01', 9, NULL);
+
+INSERT INTO CUPON (codigo_cupon, fecha_creacion, fecha_vencimiento, idCliente, idCompra)
+VALUES ('CUPON8', '2023-05-01', '2023-06-01', 9, NULL);
+
+-- Inserts para el cliente con ID 10
+INSERT INTO CUPON (codigo_cupon, fecha_creacion, fecha_vencimiento, idCliente, idCompra)
+VALUES ('CUPON9', '2023-07-01', '2023-08-01', 10, NULL);
+
+INSERT INTO CUPON (codigo_cupon, fecha_creacion, fecha_vencimiento, idCliente, idCompra)
+VALUES ('CUPO10', '2023-09-01', '2023-10-01', 10, NULL);

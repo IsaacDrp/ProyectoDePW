@@ -66,14 +66,14 @@
                             // Verifica si el usuario ha iniciado sesión
                             if (isset($_SESSION['usuario_autenticado']) && $_SESSION['usuario_autenticado'] === true) {
                                 // Muestra información específica para usuarios autenticados
-                                echo '<h2>Hola, ' . $_SESSION['correo_usuario'] . '!</h2>';
+                                echo '<h3>Hola, ' . $_SESSION['nombre_usuario'] . '!</h3>';
                                 echo '<button onclick="window.location.href=\'logout.php\'">Cerrar sesión</button>';
                             
                             } else {
-                                echo"<h1>¿Eres nuevo aquí?</h1>";
+                                echo"<h2>¿Eres nuevo aquí?</h2>";
                                 echo '<button onclick="window.location.href=\'registro.php\'">¡Regístrate!</button>';
                                 echo '<br><br>';
-                                echo "<h1>Inicia sesión<br></h1>";
+                                echo "<h2>Inicia sesión<br></h2>";
                                 echo '<form action="login.php" method="post">';
                                 echo '    <input class="search-form" type="text" name="correo" id="correo" placeholder="correo" required>';
                                 echo '    <label for="contrasena">Contraseña:</label>';
@@ -91,23 +91,45 @@
                     <!-- Menú desplegable para money-bill -->
                     <div class="money-bill-dropdown" id="money-bill-dropdown">
                         <!-- Contenido del menú desplegable -->
-                        <ul>
+                        <table>
                         <?php
+                            require "conexion.php";
+                            mysqli_set_charset($conexion,'utf8');
+
                             // Verifica si el usuario ha iniciado sesión
                             if (isset($_SESSION['usuario_autenticado']) && $_SESSION['usuario_autenticado'] === true) {
+                                //tratamiento del sql
+                                $queryCodigos = "SELECT codigo_cupon, fecha_creacion, fecha_vencimiento FROM CUPON WHERE idCliente = " . $_SESSION["id_usuario"] . ";";
+                                $resultado = $conexion->query($queryCodigos);
+                                $count = mysqli_num_rows($resultado);
+                                $_SESSION['c_cupones'] = $count;
                                 // Muestra información específica para usuarios autenticados
-                                echo '<p>Hola, ' . $_SESSION['correo_usuario'] . '. ¡Has iniciado sesión!</p>';
+                                echo '<h3>Hola, ' . $_SESSION['nombre_usuario'] . '. Estos son tus cupones: <br></h3>';
+                                if($count > 0){
+                                    echo "<tr><td>Codigo</td><td>Creacion</td><td>vencimiento</td></tr>";
+                                    echo "<tr></tr>";
+                                    while( $row = mysqli_fetch_assoc($resultado)){
+                                        echo"<tr>";
+                                        echo "<td>" . $row['codigo_cupon'] . "</td>";
+                                        echo "<td>" . $row['fecha_creacion'] . "</td>";
+                                        echo "<td>" . $row['fecha_vencimiento'] . "</td>";
+                                        echo"</tr>";
+                                    }
+                                }else{
+                                    echo"<h3>Aún no tienes cupones</h3><br><br>";
+                                }
+                                mysqli_close($conexion);
                             }
                             else{
                                 echo"<h2>¡Inicia sesión para ver tus cupones!</h2>";
                             }
                         ?>
-                        </ul>
+                        </table>
                     </div>
 
                     <div class="content-ticket">
                         <span class="text">Cupones</span>
-                        <span class="number">(0)</span>
+                        <span class="number">(<?php echo $_SESSION['c_cupones']; ?>)</span>
                     </div>
                 </div>
 
@@ -227,46 +249,6 @@
                     </div>
                 </div>
 
-                <div class="card-product">
-                    <div class="container-img">
-                        <img src="media/Products/TortaMilanesa.jpg" alt="Torta de milanesa">
-                        <span></span>
-                        <div class="button-group">
-                            <span><i class="fa-regular fa-eye"></i></span>
-                            <span><i class="fa-regular fa-heart"></i></span>
-                            <span><i class="fa-solid fa-code-compare"></i></span>
-                        </div>
-                    </div>
-                    <div class="content-card-product">
-                        <div class="stars">
-                        <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
-                        <i class="fa-regular fa-star"></i>
-                        </div>
-                        <h3>Torta de milanesa</h3>
-                        <p class="price">$58.00</p>
-                    </div>
-                </div>
-
-                <div class="card-product">
-                    <div class="container-img">
-                        <img src="media/Products/TortaMilanesa.jpg" alt="Torta de milanesa">
-                        <span></span>
-                        <div class="button-group">
-                            <span><i class="fa-regular fa-eye"></i></span>
-                            <span><i class="fa-regular fa-heart"></i></span>
-                            <span><i class="fa-solid fa-code-compare"></i></span>
-                        </div>
-                    </div>
-                    <div class="content-card-product">
-                        <div class="stars">
-                        <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
-                        <i class="fa-regular fa-star"></i>
-                        </div>
-                        <h3>Torta de milanesa</h3>
-                        <p class="price">$58.00</p>
-                    </div>
-                </div>
-            </div>
         </section>
 
         <section class="gallery">
