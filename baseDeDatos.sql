@@ -3,11 +3,11 @@ use TORTERIA;
 
 CREATE TABLE CLIENTE(
     id_cliente INT NOT NULL AUTO_INCREMENT,
-    nombre_cliente VARCHAR(20),
-    primer_apellido VARCHAR(10),
-    segundo_apellido VARCHAR(10),
-    direccion VARCHAR(30),
-    email VARCHAR(25) UNIQUE,
+    nombre_cliente VARCHAR(25),
+    primer_apellido VARCHAR(20),
+    segundo_apellido VARCHAR(20),
+    direccion VARCHAR(50),
+    email VARCHAR(255) UNIQUE,
     contrasena VARCHAR(12),
 	edad INT NOT NULL,
     PRIMARY KEY (id_cliente)
@@ -65,38 +65,38 @@ CREATE TABLE ORDEN (
 
 
 
--- Insertar 5 cupones para el cliente con ID 7
+-- Insertar 5 cupones para el cliente con ID 1
 INSERT INTO CUPON (codigo_cupon, fecha_creacion, fecha_vencimiento, idCliente, idCompra)
-VALUES ('CUPON1', '2023-01-01', '2023-02-01', 7, NULL);
+VALUES ('CUPON1', '2023-01-01', '2023-02-01', 1, NULL);
 
 INSERT INTO CUPON (codigo_cupon, fecha_creacion, fecha_vencimiento, idCliente, idCompra)
-VALUES ('CUPON2', '2023-03-01', '2023-04-01', 7, NULL);
+VALUES ('CUPON2', '2023-03-01', '2023-04-01', 1, NULL);
 
 INSERT INTO CUPON (codigo_cupon, fecha_creacion, fecha_vencimiento, idCliente, idCompra)
-VALUES ('CUPON3', '2023-05-01', '2023-06-01', 7, NULL);
+VALUES ('CUPON3', '2023-05-01', '2023-06-01', 1, NULL);
 
 INSERT INTO CUPON (codigo_cupon, fecha_creacion, fecha_vencimiento, idCliente, idCompra)
-VALUES ('CUPON4', '2023-07-01', '2023-08-01', 7, NULL);
+VALUES ('CUPON4', '2023-07-01', '2023-08-01', 1, NULL);
 
 INSERT INTO CUPON (codigo_cupon, fecha_creacion, fecha_vencimiento, idCliente, idCompra)
-VALUES ('CUPON5', '2023-09-01', '2023-10-01', 7, NULL);
+VALUES ('CUPON5', '2023-09-01', '2023-10-01', 1, NULL);
 
 -- Inserts para el cliente con ID 9
 INSERT INTO CUPON (codigo_cupon, fecha_creacion, fecha_vencimiento, idCliente, idCompra)
-VALUES ('CUPON6', '2023-01-01', '2023-02-01', 9, NULL);
+VALUES ('CUPON6', '2023-01-01', '2023-02-01', 2, NULL);
 
 INSERT INTO CUPON (codigo_cupon, fecha_creacion, fecha_vencimiento, idCliente, idCompra)
-VALUES ('CUPON7', '2023-03-01', '2023-04-01', 9, NULL);
+VALUES ('CUPON7', '2023-03-01', '2023-04-01', 2, NULL);
 
 INSERT INTO CUPON (codigo_cupon, fecha_creacion, fecha_vencimiento, idCliente, idCompra)
-VALUES ('CUPON8', '2023-05-01', '2023-06-01', 9, NULL);
+VALUES ('CUPON8', '2023-05-01', '2023-06-01', 2, NULL);
 
 -- Inserts para el cliente con ID 10
 INSERT INTO CUPON (codigo_cupon, fecha_creacion, fecha_vencimiento, idCliente, idCompra)
-VALUES ('CUPON9', '2023-07-01', '2023-08-01', 10, NULL);
+VALUES ('CUPON9', '2023-07-01', '2023-08-01', 3, NULL);
 
 INSERT INTO CUPON (codigo_cupon, fecha_creacion, fecha_vencimiento, idCliente, idCompra)
-VALUES ('CUPO10', '2023-09-01', '2023-10-01', 10, NULL);
+VALUES ('CUPO10', '2023-09-01', '2023-10-01', 3, NULL);
 
 
 -- Insertar torta vegetariana
@@ -174,7 +174,7 @@ VALUES (3, 'Squirt Quitased', 20.00, 'Refresco Squirt Quitased', 'imagen_squirt_
 
 -- Insertar jugo Boing de Mango en presentación de vidrio
 INSERT INTO MENU (tipo_patillo, nombre_platillo, precio, descripcion, linkImagen)
-VALUES (3, 'Boing de Mango (Vidrio)', 20.00, 'Jugo Boing de Mango en presentación de vidrio', 'imagen_boing_mango_vidrio.jpg');
+VALUES (3, 'Boing de Mango', 20.00, 'Jugo Boing de Mango en presentación de vidrio', 'imagen_boing_mango_vidrio.jpg');
 
 -- Insertar jugo Del Valle Manzana en presentación de vidrio
 INSERT INTO MENU (tipo_patillo, nombre_platillo, precio, descripcion, linkImagen)
