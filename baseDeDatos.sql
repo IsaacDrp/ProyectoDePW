@@ -4,18 +4,18 @@ use TORTERIA;
 CREATE TABLE CLIENTE(
     id_cliente INT NOT NULL AUTO_INCREMENT,
     nombre_cliente VARCHAR(25),
-    primer_apellido VARCHAR(20),
-    segundo_apellido VARCHAR(20),
-    direccion VARCHAR(50),
+    primer_apellido VARCHAR(25),
+    segundo_apellido VARCHAR(25),
+    direccion VARCHAR(255),
     email VARCHAR(255) UNIQUE,
-    contrasena VARCHAR(12),
+    contrasena VARCHAR(30),
 	edad INT NOT NULL,
     PRIMARY KEY (id_cliente)
 	);
 
 CREATE TABLE EMAIL(
     idEmail INT NOT NULL AUTO_INCREMENT,
-    email VARCHAR(25),
+    email VARCHAR(255),
     PRIMARY KEY (idEmail)
 );
     
