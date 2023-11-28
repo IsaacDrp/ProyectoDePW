@@ -187,3 +187,9 @@ VALUES (3, 'Jumex de Durazno', 20.00, 'Jugo Jumex sabor Durazno en presentación
 -- Insertar jugo Boing Uva en presentación de vidrio
 INSERT INTO MENU (tipo_patillo, nombre_platillo, precio, descripcion, linkImagen)
 VALUES (3, 'Boing de Uva', 20.00, 'Jugo Boing sabor Uva en presentación de vidrio', 'imagen_boing_uva_vidrio.jpg');
+
+ALTER TABLE CUPON
+ADD CONSTRAINT fk_idCliente
+FOREIGN KEY (idCliente) 
+REFERENCES CLIENTE(id_cliente)
+ON DELETE CASCADE;

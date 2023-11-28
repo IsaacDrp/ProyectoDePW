@@ -21,10 +21,13 @@
         $_SESSION['nombre_usuario'] = $usr;
         $_SESSION['id_usuario'] = $id_usr;
         mysqli_close($conexion);
+
         header("Location: index.php");
     }
     else{
-        echo"<p>Incorrecto</p>";
+        echo"<p>Datos de ingreso incorrectos</p>";
+        mysqli_close($conexion);
+
     }
 
 ?>

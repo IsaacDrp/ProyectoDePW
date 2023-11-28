@@ -8,34 +8,6 @@
     <title>Tortas el rinconcito</title>
 </head>
 <body>
-<style>
-    .gallery {
-        display: grid;
-        grid-template-columns: repeat(4, 1fr);
-        grid-template-rows: repeat(2, 30rem);
-        gap: 1.5rem;
-        margin-bottom: 3rem;
-    }
-    .gallery img {
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
-    }
-
-    .gallery-img-3 {
-        grid-column: 2/4;
-        grid-row: 1/3;
-    }
-
-    .specials {
-        display: flex;
-        flex-direction: column;
-        gap: 2rem;
-        margin-bottom: 3rem;
-        }
-
-
-</style>
 
     <header>
         <div class="container-hero">
@@ -67,8 +39,9 @@
                             if (isset($_SESSION['usuario_autenticado']) && $_SESSION['usuario_autenticado'] === true) {
                                 // Muestra información específica para usuarios autenticados
                                 echo '<h3>Hola, ' . $_SESSION['nombre_usuario'] . '!</h3>';
+                                echo '<button onclick="window.location.href=\'myAccount.php\'">Mi cuenta</button><br></br>';
                                 echo '<button onclick="window.location.href=\'logout.php\'">Cerrar sesión</button>';
-                            
+
                             } else {
                                 echo"<h2>¿Eres nuevo aquí?</h2>";
                                 echo '<button onclick="window.location.href=\'registro.php\'">¡Regístrate!</button>';
@@ -110,7 +83,7 @@
                                     echo "<tr></tr>";
                                     while( $row = mysqli_fetch_assoc($resultado)){
                                         echo"<tr>";
-                                        echo "<td>" . $row['codigo_cupon'] . "</td>";
+                                        echo "<td>" . $row['codigo_`cupon'] . "</td>";
                                         echo "<td>" . $row['fecha_creacion'] . "</td>";
                                         echo "<td>" . $row['fecha_vencimiento'] . "</td>";
                                         echo"</tr>";
@@ -306,52 +279,6 @@
 				/>
 			</section>
 
-            <section class="container specials">
-                <h1 class="heading-1">Especiales</h1>
-                <div class="container-products">
-                <div class="container-products">
-
-                <div class="card-product">
-                    <div class="container-img">
-                        <img src="media/Products/TortaMilanesa.jpg" alt="Torta de milanesa">
-                        <span></span>
-                        <div class="button-group">
-                            <span><i class="fa-regular fa-eye"></i></span>
-                            <span><i class="fa-regular fa-heart"></i></span>
-                            <span><i class="fa-solid fa-code-compare"></i></span>
-                        </div>
-                    </div>
-                    <div class="content-card-product">
-                        <div class="stars">
-                        <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
-                        <i class="fa-regular fa-star"></i>
-                        </div>
-                        <h3>Torta de milanesa</h3>
-                        <p class="price">$58.00</p>
-                    </div>
-                </div>
-
-                <div class="card-product">
-                    <div class="container-img">
-                        <img src="media/Products/TortaMilanesa.jpg" alt="Torta de milanesa">
-                        <span></span>
-                        <div class="button-group">
-                            <span><i class="fa-regular fa-eye"></i></span>
-                            <span><i class="fa-regular fa-heart"></i></span>
-                            <span><i class="fa-solid fa-code-compare"></i></span>
-                        </div>
-                    </div>
-                    <div class="content-card-product">
-                        <div class="stars">
-                        <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
-                        <i class="fa-regular fa-star"></i>
-                        </div>
-                        <h3>Torta de milanesa</h3>
-                        <p class="price">$58.00</p>
-                    </div>
-                </div>
-            </div>
-        </section>
         
         <section class="bannerUs">
         <div class="content-banner1">
