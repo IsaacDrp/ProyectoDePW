@@ -7,8 +7,8 @@
     <link rel="shortcut icon" href="media/favicon.png" type="image/x-icon">
     <title>Tortas el rinconcito</title>
 </head>
-<body>
 
+<body>
     <header>
         <div class="container-hero">
             <div class="container hero">
@@ -172,22 +172,25 @@
         <section class="container top-categories">
             <h1 class="heading-1">Categorías</h1>
             <div class="container-categories">
+            <?php
+                    // Obtener el valor actual de la variable desde la URL o alguna otra fuente
+                    $Product_category = isset($_GET['category']) ? $_GET['category'] : 0;
+            ?>
 
                 <div class="card-category category-tortas">
                     <p>Tortas</p>
-                    <span>Ver más</span>
+                    <span onclick="updateCategory(1)">Ver más</span>
                 </div>
 
                 <div class="card-category category-desayunos">
                     <p>Desayunos</p>
-                    <span>Ver más</span>
+                    <span onclick="updateCategory(2)">Ver más</span>
                 </div>
 
                 <div class="card-category category-bebidas">
                     <p>Bebidas</p>
-                    <span>Ver más</span>
+                    <span onclick="updateCategory(3)">Ver más</span>
                 </div>
-
             </div>
         </section>
         
@@ -206,7 +209,15 @@
                     mysqli_set_charset($conexion,'utf8');
 
                     //$query = "SELECT nombre_platillo, precio, descripcion, linkImagen FROM MENU WHERE tipo_patillo=1;";
-                    $query = "SELECT nombre_platillo, precio, descripcion, linkImagen FROM MENU;";
+                    $query = "SELECT nombre_platillo, precio, descripcion, linkImagen FROM MENU";
+                    
+                    if($Product_category != 0){
+                        $query = $query." WHERE tipo_patillo = '$Product_category';";
+                    }
+                    else{
+                        $query = $query.';';
+                    }
+
                     $resultado = $conexion->query($query);
                     $count = mysqli_num_rows($resultado);
 
@@ -497,7 +508,11 @@
             });
         });
     </script>
-
-    
+    <script>
+    function updateCategory(category) {
+        // Realizar una redirección o enviar la información de alguna otra manera
+        window.location.href = 'index.php?category=' + category;
+    }
+    </script>    
 </body>
 </html>
