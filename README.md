@@ -5,6 +5,11 @@
 Proyecto hecho para programacion web 1 del grupo 1510 con el profesor Aaron Velasco Agustín de la FES ARAGÓN, UNAM.
 Por ISAAC ABRAHAM DE RAMÓN PÉREZ
 
+Link de la página:
+
+https://tortaselrinconcito.great-site.net/
+
+
 La idea de hacer la pagina web centrada en el negocio de tortas "el rinconcito" nacio de la ya existente necesidad de crear una pagina web para dar a conocer el negocio familiar.
 
 Para hacer el diseño de la pagina web, se utilizo la plantilla del canal de You-Tube: Programación para el Mundo.
