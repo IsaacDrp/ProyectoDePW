@@ -46,18 +46,18 @@ Enumera las características clave de tu página web.
 Para este proyecto se utilizaron todas estas tecnologías
 
 - HTML
-- - Es la estructura del marcado de todo el texto.
+    - Es la estructura del marcado de todo el texto.
 - CSS
-- - Estilos, la segunda parte mas extensa en codigo del proyecto.
+    - Estilos, la segunda parte mas extensa en codigo del proyecto.
 - JavaScript
-- - Para algunas funciones porque no me convencía su implementacion en php
+    - Para algunas funciones porque no me convencía su implementacion en php
 - PHP
-- - Para todo lo que tuviera que ver con consultas a bases de datos y sesiones de usuarios.
+    - Para todo lo que tuviera que ver con consultas a bases de datos y sesiones de usuarios.
 - MYSQL
-- - Crucial para el funcionamiento de los sistemas de usuario y menú.
+    - Crucial para el funcionamiento de los sistemas de usuario y menú.
 
 Todas estas con la ayuda de las herramientas de XAMPPP.
 - Apache
 - PhpMyAdmin
-- MariaDB (Durante las pruebas)
-- MySQL (En producción)
+    - MariaDB (Durante las pruebas)
+    - MySQL (En producción)
