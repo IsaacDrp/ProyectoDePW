@@ -31,7 +31,7 @@
     require "conexion.php";
     mysqli_set_charset($conexion,'utf8');
 
-    if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST["update"])) {
+    if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST["update"]) && $_POST["contrasenaA"]==$contrasena) {
 
         $nuevo_nombre = $_POST['nombre_cliente'];
         $nuevo_pApellido = $_POST['primer_apellido'];
@@ -54,10 +54,13 @@
         // Verificar si la actualización fue exitosa
         if ($resultado_update) {
             $_SESSION['nombre_usuario'] = $nuevo_nombre;
-            header("location: /ProyectoDePW/successful.html");
+            header("location: successful.html");
         } else {
             echo '<p>Error al actualizar los datos: ' . mysqli_error($conexion) . '</p>';
         }
+    }
+    else{
+        echo'<p>Contraseña actual incorrecta</p>';
     }
     
     if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST["eliminar"])) {
@@ -71,7 +74,7 @@
             $resultado_eliminar = $conexion->query($query_eliminar);
     
             mysqli_close($conexion);
-            header("location: /ProyectoDePW/successful.html");
+            header("location: successful.html");
         } else {
             echo '<p>Contraseña incorrecta para la eliminación</p>';
         }

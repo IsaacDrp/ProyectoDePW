@@ -16,5 +16,5 @@
     
     mysqli_query($conexion, $query);
     mysqli_close($conexion);
-    header("location: /ProyectoDePW/successful.html");
+    header("location: successful.html");
 ?>

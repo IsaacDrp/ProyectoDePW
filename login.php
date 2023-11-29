@@ -22,7 +22,7 @@
         $_SESSION['id_usuario'] = $id_usr;
         mysqli_close($conexion);
 
-        header("Location: index.php");
+        header("Location: /");
     }
     else{
         echo"<p>Datos de ingreso incorrectos</p>";
